@@ -151,20 +151,8 @@ for (let index = 0; index < arenamainClass.length; index++) {
   function arenamainTriggerFunc() {
     // request open iframe
     if (number <= 1) {
-      axios
-        .post(`${apiBaseUrl}/portal/navigation/open`, {
-          ip: Cookies.get("ARENASESSID"),
-          start_time: new Date().getTime() / 1000,
-        })
-        .then(function (response) {
-          // const { data } = response;
-          // // console.log(data);
-          number++;
-          localStorage.setItem("arenamain-number", number);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+         number++;
+         localStorage.setItem("arenamain-number", number);
     }
 
     // check display anchor
