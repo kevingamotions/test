@@ -145,14 +145,12 @@ for (let index = 0; index < arenamainClass.length; index++) {
   document.body.appendChild(arenamainCookies);
 
   let number = 1;
-  let arenaNumberStorage = localStorage.getItem("arenamain-number");
   number = arenaNumberStorage != null ? arenaNumberStorage : number;
 
   function arenamainTriggerFunc() {
     // request open iframe
     if (number <= 1) {
          number++;
-         localStorage.setItem("arenamain-number", number);
     }
 
     // check display anchor
